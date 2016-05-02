@@ -18,6 +18,11 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @var string
+     */
+    protected $name;
+
     public function __construct()
     {
         parent::__construct();
