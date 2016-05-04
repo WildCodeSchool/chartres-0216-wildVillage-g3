@@ -1,3 +1,4 @@
+/* CSS page d'inscription*/
 
 .btn{
 	margin-left: 250px;
@@ -7,6 +8,7 @@
 
 .register-title{
 	text-align: center;
+	padding-top: 150px;
 }
 
 .age-field{
