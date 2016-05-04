@@ -67,10 +67,18 @@ class RegistrationController extends Controller
 
             $dispatcher->dispatch(FOSUserEvents::REGISTRATION_COMPLETED, new FilterUserResponseEvent($user, $request, $response));
 
+            $em = $this->getDoctrine()->getManager();
+            $age = $request->request->get('age');
+            $datauser = new Datauser();
+            $datauser->setIduser($user->getId());
+            $datauser->setAge($age);
+            $em->persist($datauser);
+            $em->flush();
+
             return $response;
         }
 
-        return $this->render('default/register.html.twig', array(
+        return $this->render('registration/register.html.twig', array(
             'form' => $form->createView(),
         ));
     }
