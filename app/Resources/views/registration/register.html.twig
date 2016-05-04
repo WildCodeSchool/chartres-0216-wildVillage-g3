@@ -11,7 +11,8 @@
 
 		<div class="col-md-12 register-title">
 			<h3>Enregistrement</h3>
-			<hr>
+		</br>
+		</br>
 		</div>
 		<div class="col-md-12 ">
 			<div class="col-md-6">
@@ -33,6 +34,15 @@
 		    </div>
 		</div>
 
+		<div class="col-md-12 ecart">
+		    <div class="col-md-6 a">
+		        <p class="appel">Age :</p>
+		    </div>
+		    <div class="col-md-6">
+		        <input class="age-field" type="number" name="age">
+		    </div>
+		</div>
+
 		<div class="col-md-12 register-form">
 			<div class="col-md-6">
 		    	Mot de passe :
@@ -45,7 +55,7 @@
 
 		<div class="col-md-12 register-form">
 			<div class="col-md-6">
-		    	Confirmation :
+		    	Confirmation mot de passe :
 		    </div>
 			<div class="col-md-6">
 				{{ form_widget(form.plainPassword.second) }}
@@ -54,7 +64,7 @@
 		</div>
 
 	    <div class="col-md-12 register-but">
-	        <input class="btn btn-success" type="submit" value="{{ 'registration.submit'|trans }}" />
+	        <input class="btn btn-success" type="submit" text-align right value="{{ 'registration.submit'|trans }}" />
 	    </div>
 	{{ form_end(form) }}
 </div>
