@@ -31,23 +31,44 @@ class DataUser
     /**
      * @var int
      *
-     * @ORM\Column(name="age", type="integer")
+     * @ORM\Column(name="age", type="integer", nullable=true)
      */
     private $age;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
+     * @ORM\Column(name="biographie", type="string", length=5000, nullable=true)
      */
-    private $nom;
+    private $biographie;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="prenom", type="string", length=255, nullable=true)
+     * @ORM\Column(name="profilTwitter", type="string", length=255, nullable=true)
      */
-    private $prenom;
+    private $profilTwitter;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="profilLinkedIn", type="string", length=255, nullable=true)
+     */
+    private $profilLinkedIn;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="profilGithub", type="string", length=255, nullable=true)
+     */
+    private $profilGithub;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="profilDoYouBuzz", type="string", length=255, nullable=true)
+     */
+    private $profilDoYouBuzz;
 
 
     /**
@@ -109,51 +130,123 @@ class DataUser
     }
 
     /**
-     * Set nom
+     * Set biographie
      *
-     * @param string $nom
+     * @param string $biographie
      *
      * @return DataUser
      */
-    public function setNom($nom)
+    public function setBiographie($biographie)
     {
-        $this->nom = $nom;
+        $this->biographie = $biographie;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get biographie
      *
      * @return string
      */
-    public function getNom()
+    public function getBiographie()
     {
-        return $this->nom;
+        return $this->biographie;
     }
 
     /**
-     * Set prenom
+     * Set profilTwitter
      *
-     * @param string $prenom
+     * @param string $profilTwitter
      *
      * @return DataUser
      */
-    public function setPrenom($prenom)
+    public function setProfilTwitter($profilTwitter)
     {
-        $this->prenom = $prenom;
+        $this->profilTwitter = $profilTwitter;
 
         return $this;
     }
 
     /**
-     * Get prenom
+     * Get profilTwitter
      *
      * @return string
      */
-    public function getPrenom()
+    public function getProfilTwitter()
     {
-        return $this->prenom;
+        return $this->profilTwitter;
+    }
+
+    /**
+     * Set profilLinkedIn
+     *
+     * @param string $profilLinkedIn
+     *
+     * @return DataUser
+     */
+    public function setProfilLinkedIn($profilLinkedIn)
+    {
+        $this->profilLinkedIn = $profilLinkedIn;
+
+        return $this;
+    }
+
+    /**
+     * Get profilLinkedIn
+     *
+     * @return string
+     */
+    public function getProfilLinkedIn()
+    {
+        return $this->profilLinkedIn;
+    }
+
+    /**
+     * Set profilGithub
+     *
+     * @param string $profilGithub
+     *
+     * @return DataUser
+     */
+    public function setProfilGithub($profilGithub)
+    {
+        $this->profilGithub = $profilGithub;
+
+        return $this;
+    }
+
+    /**
+     * Get profilGithub
+     *
+     * @return string
+     */
+    public function getProfilGithub()
+    {
+        return $this->profilGithub;
+    }
+
+    /**
+     * Set profilDoYouBuzz
+     *
+     * @param string $profilDoYouBuzz
+     *
+     * @return DataUser
+     */
+    public function setProfilDoYouBuzz($profilDoYouBuzz)
+    {
+        $this->profilDoYouBuzz = $profilDoYouBuzz;
+
+        return $this;
+    }
+
+    /**
+     * Get profilDoYouBuzz
+     *
+     * @return string
+     */
+    public function getProfilDoYouBuzz()
+    {
+        return $this->profilDoYouBuzz;
     }
 }
 
