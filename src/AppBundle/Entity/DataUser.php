@@ -249,4 +249,4 @@ class DataUser
         return $this->profilDoYouBuzz;
     }
 }
-
+ 
