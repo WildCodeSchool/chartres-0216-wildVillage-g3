@@ -18,8 +18,8 @@
         <ul class="nav navbar-nav navbar-right">
           {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}                      
             <li class="dropdown text-navbar">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bienvenu(e) {{ app.user.username }} <span class="caret"></span></a>
-              <ul class="dropdown-menu">
+              <a href="#" class="dropdown-toggle nav-bvn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bienvenu(e) {{ app.user.username }} <span class="caret"></span></a>
+              <ul class="dropdown-menu menu-ouvert">
                 <li class="text-navbar"><a href="{{ path('user_dashboard') }}">Mon Espace</a></li>
                 <li class="text-navbar"><a href="#">Messagerie</a></li>
                 <li class="text-navbar"><a href="#">Mes paramètres</a></li>
@@ -28,7 +28,7 @@
               </ul>
             </li>
           {% else %}
-            <li class="text-navbar"><a href="{{ path('user_register') }}">S'enregitrer</a></li>
+            <li class="text-navbar"><a href="{{ path('user_register') }}">S'inscrire</a></li>
             <li class="text-navbar"><a href="{{ path('user_login') }}"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Se connecter</a></li>
           {% endif %}
         </ul>

@@ -1,3 +1,21 @@
 {% extends 'base.html.twig' %}
 {% block navbar %}{% include ('navbar/navbar.html.twig') %}{% endblock %}
+	{% block accueil %}
+		{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+			<div class="col-md-12 accueil">
+				<div class="col-md-6 col-md-offset-3 box-accueil">
+					<h1>Bienvenue dans Wild Village <b>{{ app.user.username }}</b></h1>
+					</br>
+					<h2>n'hésite pas à aller ajouter des infos sur ton espace en cliquant juste <a href="#"><u>ici</u></a>!<h2>
+				</div>
+			</div>
+		{% else %}
+			<div class="col-md-12 accueil">
+				<div class="col-md-6 col-md-offset-3 box-accueil">
+					<h1>Bienvenue dans Wild Village !</h1>
+					<a href="{{ path('user_register') }}"><button type="button" class="btn btn-accueil">Rejoins nous !</button></a>
+				</div>
+			</div>
+		{% endif %}
+	{% endblock %}
 {% block footer %}{% include ('footer/footer.html.twig') %}{% endblock %}
