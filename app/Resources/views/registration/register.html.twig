@@ -10,7 +10,7 @@
 	{{ form_start(form, {'method': 'post', 'action': path('user_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
 		<div class="col-md-12 register-title">
-			<h3>Enregistrement</h3>
+			<h1>Enregistrement</h1>
 		</br>
 		</br>
 		</div>
@@ -64,7 +64,9 @@
 		</div>
 
 	    <div class="col-md-12 register-but">
-	        <input class="btn btn-register" type="submit" text-align right value="{{ 'registration.submit'|trans }}" />
+	    	<div class="col-md-6 col-md-offset-6">
+	        	<input class="btn btn-register" type="submit" text-align right value="{{ 'registration.submit'|trans }}" />
+	    	</div>
 	    </div>
 	{{ form_end(form) }}
 </div>

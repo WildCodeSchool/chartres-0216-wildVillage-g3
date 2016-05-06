@@ -25,5 +25,9 @@ user_dashboard:
     path:     /user/dashboard
     defaults: { _controller: AppBundle:Default:index }
 
+user_mailbox:
+    path:     /user/dashboard/Mailbox
+    defaults: { _controller: AppBundle:Mailbox:mails}
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
