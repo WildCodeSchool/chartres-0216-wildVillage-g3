@@ -14,11 +14,12 @@
 }
 
 .text-navbar:hover {
-	background-color:#00B5B5;
+	background-color:#00B5B5!important;
 }
 
 .text-navbar a:hover {
 	color:white!important;
+	background-color:#00B5B5!important;
 }
 
 /*footer */
