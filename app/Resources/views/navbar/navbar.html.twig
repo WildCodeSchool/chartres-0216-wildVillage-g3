@@ -9,7 +9,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <a class="navbar-brand" href="{{ path('post') }}"><img src="{{ asset('img/logo.png') }}"></img ></a>
+        {% else %}
         <a class="navbar-brand" href="{{ path('home') }}"><img src="{{ asset('img/logo.png') }}"></img ></a>
+      {% endif %}
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -20,9 +24,9 @@
             <li class="dropdown text-navbar">
               <a href="#" class="dropdown-toggle nav-bvn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bienvenu(e) {{ app.user.username }} <span class="caret"></span></a>
               <ul class="dropdown-menu menu-ouvert">
-                <li class="text-navbar"><a href="{{ path('user_dashboard') }}">Mon Espace</a></li>
-                <li class="text-navbar"><a href="#">Messagerie</a></li>
-                <li class="text-navbar"><a href="#">Mes paramètres</a></li>
+                <li class="text-navbar"><a href="{{path('user_profil') }}">Mon Espace</a></li>
+                <li class="text-navbar"><a href="{{path('messagerie') }}">Messagerie</a></li>
+                <li class="text-navbar"><a href="{{path('modify_user') }}">Mes paramètres</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="text-navbar"><a href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Se déconnecter</a></li>
               </ul>

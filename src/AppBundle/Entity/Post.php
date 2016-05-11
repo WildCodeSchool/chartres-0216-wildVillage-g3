@@ -31,14 +31,14 @@ class Post
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="datetime")
+     * @ORM\Column(name="date", type="datetime", nullable=true)
      */
     private $date;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="auteur", type="integer")
+     * @ORM\Column(name="auteur", type="integer", nullable=true)
      */
     private $auteur;
 

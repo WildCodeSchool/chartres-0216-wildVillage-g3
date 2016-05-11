@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block navbar %}{% include ('navbar/navbar.html.twig') %}{% endblock %}
+
+{% block body %}
+
+	<div class="container-profil">
+		<h1 class="text-center"> TON PROFIL </h1>
+		<div class="col-md-6 col-md-offset-3">
+		<p>Pseudo :<b> {{ user.username }}</b></p>
+		<br/>
+		<p>Adresse Email :<b> {{ user.email }}</b></p>
+		<br/>
+		<p>Age :<b> {{ datauser.age }}</b></p>
+		<br/>
+		<p>Biographie :<b> {{ datauser.biographie }}</b></p>
+		<br/>
+		<p>Profil Twitter :<b> {{ datauser.profilTwitter }}</b></p>
+		<br/>
+		<p>Profil Github :<b> {{ datauser.profilGithub }}</b></p>
+		<br/>
+		<p>Profil DoYouBuzz :<b> {{ datauser.profilDoYouBuzz }}</b></p>
+		<br/>
+		<p>Profil LinkedIn :<b> {{ datauser.profilLinkedIn }}</b></p>
+		<br/>
+	</div>
+	</div>
+	
+{% endblock %}

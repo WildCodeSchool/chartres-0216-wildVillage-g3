@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+{% block navbar %}{% include ('navbar/navbar.html.twig') %}{% endblock %}
+
+
+{% block body %}
+<div id="container-msg">
+	<h1 class="text-center">Messagerie</h1>
+    <div class="col-md-6 col-md-offset-3">
+    	<h2>Envoyer un message</h2>
+      	<form method="post" action="{{ path ('messagerie_new') }}">
+      		<div class="row">
+      			<div class="input-group">
+                	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	        		<input class="form-control destinataire-msg" type="text" name="destinataire" placeholder="Destinataire">
+	        	</div>
+	        </div>
+	        <div class="row padding-top">
+	        	<div class="input-group">
+                	<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+	        		<textarea class="textarea-msg form-control" name="message" placeholder="Votre message" ></textarea>
+	        	</div>
+	        </div>
+	        <div class="row padding-top">
+	        	<input class="btn btn-envoyer" type="submit">
+	    	</div>
+    	</form>
+    </div>
+
+    <div class="col-md-12" style="margin-top:50px;">
+    	<div class="col-md-3 col-md-offset-3">
+    		<h2>Boite de reception</h2>
+      
+
+		      {% for msg in tab|reverse %}
+
+		        <hr>
+		        <p>{{ msg['auteur']|upper }}</p>
+		        <p>{{ msg['message'] }}</p>
+		       
+
+		        
+
+		      {% endfor %}
+		</div>
+		<div class="col-md-3">
+			<h2>Boite d'envoi</h2>
+		      {% for msg in tabenvoi|reverse %}
+
+		        <hr>
+		        <p>{{ msg['auteur']|upper }}</p>
+		        <p>{{ msg['message'] }}</p>
+		       
+
+		        
+
+		      {% endfor %}
+    	</div>
+    </div>
+    	
+    
+
+</div>
+{% endblock %}

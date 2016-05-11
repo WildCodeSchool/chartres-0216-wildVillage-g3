@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+{% block navbar %}{% include ('navbar/navbar.html.twig') %}{% endblock %}
+
+{% block body %}
+<div class="reset-container">
+
+      <form method="post" action="{{ path ('modify_user') }}">
+
+      	<div class="row">
+	        <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8">
+	            <h2>Mise à jour des informations</h2>
+	        </div>
+    	</div>
+      	<div class="row">
+	        <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8">
+		        <p class="titre-champs"><b>Biographie</b></p>
+		        <div class="input-group">
+            		<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+		        	<textarea class="form-control" type="text" name="biographie" placeholder="Écrivez ici une description de vous même"></textarea>
+		        </div>
+		    </div>
+		</div>
+		<div class="row">
+	        <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8">
+		        <p class="titre-champs"><b>Profil Twitter</b></p>
+		        <div class="input-group">
+            		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		        	<input class="form-control" type="text" name="profilTwitter" placeholder="Votre compte Twitter">
+		        </div>
+		    </div>
+		</div>
+		<div class="row">
+	        <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8">
+		        <p class="titre-champs"><b>Profil LinkedIn</b></p>
+		        <div class="input-group">
+            		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		        	<input class="form-control" type="text" name="profilLinkedIn" placeholder="Votre compte LinkedIn">
+		        </div>
+		    </div>
+		</div>
+		<div class="row">
+	        <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8">
+		        <p class="titre-champs"><b>Profil Github</b></p>
+		        <div class="input-group">
+            		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		        	<input class="form-control" type="text" name="profilGithub" placeholder="Votre compte Github">
+		        </div>
+		    </div>
+		</div>
+		<div class="row">
+	        <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8">
+		        <p class="titre-champs"><b>Profil DoYouBuzz</b></p>
+		        <div class="input-group">
+            		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		        	<input class="form-control" type="text" name="profilDoYouBuzz" placeholder="Votre compte DoYouBuzz">
+		        </div>
+		    </div>
+		</div>
+		<div class="row">
+	        <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8 titre-champs">
+		        <input class="btn btn-envoyer" type="submit">
+		    </div>
+		</div>
+      </form>
+
+
+</div>
+{% endblock %}

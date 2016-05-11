@@ -5,9 +5,17 @@ home:
     path:     /
     defaults: { _controller: AppBundle:Default:index}
 
+modify_user:
+    path:    /reset
+    defaults: { _controller: AppBundle:User:modifyUser }
+
 user_login:
     path:     /login
     defaults: { _controller: AppBundle:Security:login }
+
+user_profil:
+    path:     /user/profil
+    defaults: { _controller: AppBundle:User:showProfil }
 
 user_login_check:
     path:     /user/login/check
@@ -28,6 +36,27 @@ user_dashboard:
 user_mailbox:
     path:     /user/dashboard/Mailbox
     defaults: { _controller: AppBundle:Mailbox:mails}
+
+post:
+    path:    /accueil   
+    defaults: { _controller: AppBundle:Default:post }
+
+post_new:
+    path:    /post/new
+    defaults: { _controller: AppBundle:Default:postNew }
+
+messagerie:
+    path:    /messagerie
+    defaults: { _controller: AppBundle:Mailbox:messagerie }
+
+messagerie_new:
+    path:    /messagerie/new
+    defaults: { _controller: AppBundle:Mailbox:messagerieNew }
+
+#a partir d'ici ça ne sert plus à rien c'est que des test#
+reset_password:
+    path:     /reset/password
+    defaults: { _controller: AppBundle:ChangePassword:changePassword}
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
